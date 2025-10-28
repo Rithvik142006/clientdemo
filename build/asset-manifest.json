@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3a8e315e.css",
+    "main.js": "/static/js/main.9413a375.js",
+    "static/js/453.61ff8217.chunk.js": "/static/js/453.61ff8217.chunk.js",
+    "static/media/Banner.jpeg": "/static/media/Banner.c8b011164ed6857cbb31.jpeg",
+    "static/media/Fashion.jpg": "/static/media/Fashion.e3ae43999a3adaf25d07.jpg",
+    "static/media/about.jpg": "/static/media/about.931adee6dd02c4f4e293.jpg",
+    "static/media/Food1.jpg": "/static/media/Food1.6eb2fad55b535c524003.jpg",
+    "static/media/mastercardLogo.jpg": "/static/media/mastercardLogo.d8bc7b15dd73862a06eb.jpg",
+    "static/media/Burger.jpeg": "/static/media/Burger.38b624e28acdeba6ae9d.jpeg",
+    "static/media/Coffee.jpeg": "/static/media/Coffee.776f833933867a9ce927.jpeg",
+    "static/media/Biriyani.jpeg": "/static/media/Biriyani.354fbc66e36d6cacd274.jpeg",
+    "static/media/Contact.JPG": "/static/media/Contact.0dd0654a709ac656e1ad.JPG",
+    "index.html": "/index.html",
+    "main.3a8e315e.css.map": "/static/css/main.3a8e315e.css.map",
+    "main.9413a375.js.map": "/static/js/main.9413a375.js.map",
+    "453.61ff8217.chunk.js.map": "/static/js/453.61ff8217.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3a8e315e.css",
+    "static/js/main.9413a375.js"
+  ]
+}

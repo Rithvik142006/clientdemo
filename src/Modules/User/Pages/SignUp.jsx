@@ -29,7 +29,7 @@ export default function SignUp() {
     e.preventDefault();
     console.log('Form Data:', formData);
   
-    await axios.post('http://localhost:7002/api/insert', formData)
+    await axios.post('http://13.233.142.193:7002/api/insert', formData)
       .then((res) => {
         if (res.data?.saveadmin) {  // Check if saveadmin exists inside res.data
           alert("Inserted Successfully");
@@ -45,7 +45,7 @@ export default function SignUp() {
 
 const [data,setData]=useState([])
 useEffect(()=>{
-  axios.get('http://localhost:7002/api/get')
+  axios.get('http://13.233.142.193:7002/api/get')
   .then((res)=>{
     console.log(res.data)
     setData(res.data)

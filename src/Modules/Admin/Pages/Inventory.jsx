@@ -59,7 +59,7 @@ export default function Inventory() {
       formData.append('expiryDate', category.expiryDate);
       formData.append('image', file);
 
-      const res = await axios.post('http://localhost:7002/invent/in', formData, {
+      const res = await axios.post('http://13.233.142.193:7002/invent/in', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
 

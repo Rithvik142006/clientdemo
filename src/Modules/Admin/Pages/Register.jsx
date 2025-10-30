@@ -32,7 +32,7 @@ export default function Register() {
       
      
     
-      await axios.post('http://localhost:7002/app/insert', formData)
+      await axios.post('http://13.233.142.193:7002/app/insert', formData)
     
       .then((res)=>{
         if(res.saveadmin){
@@ -47,7 +47,7 @@ export default function Register() {
     
     const [data,setData]=useState([])
     useEffect(()=>{
-      axios.get('http://localhost:7002/api/get')
+      axios.get('http://13.233.142.193:7002/api/get')
       .then((res)=>{
         console.log(res.data)
         setData(res.data)

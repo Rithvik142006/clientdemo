@@ -36,7 +36,7 @@ export default function Form() {
   AllData.append('address',formData.address);
   AllData.append('image',file);
 
-  await axios.post('http://localhost:7002/api/insert', AllData)
+  await axios.post('http://13.233.142.193:7002/api/insert', AllData)
 
   .then((res)=>{
     if(res.savestudent){
@@ -51,7 +51,7 @@ export default function Form() {
 
 const [data,setData]=useState([])
 useEffect(()=>{
-  axios.get('http://localhost:7002/api/get')
+  axios.get('http://13.233.142.193:7002/api/get')
   .then((res)=>{
     console.log(res.data)
     setData(res.data)

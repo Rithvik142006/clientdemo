@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Box, Typography, Paper, CircularProgress, Alert } from '@mui/material';
 
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || "http://localhost:7002";
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || "http://13.233.142.193:7002";
 
 const Notification = () => {
     const [notifications, setNotifications] = useState([]);

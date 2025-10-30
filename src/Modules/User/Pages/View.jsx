@@ -15,7 +15,7 @@ export default function View() {
   const navigate = useNavigate();  // ✅ Hook for navigation
 
   useEffect(() => {
-    Axios.get("http://localhost:7002/invent/Home")
+    Axios.get("http://13.233.142.193:7002/invent/Home")
       .then((res) => {
         console.log("API Response:", res.data);
         setData(res.data?.data || []);
@@ -34,7 +34,7 @@ export default function View() {
             <CardMedia
               component="img"
               className="card-image"
-              image={item?.image ? `http://localhost:7002/invent/files/${item.image}` : "https://via.placeholder.com/180"}
+              image={item?.image ? `http://13.233.142.193:7002/invent/files/${item.image}` : "https://via.placeholder.com/180"}
               alt="Item Image"
               onError={(e) => { e.target.onerror = null; e.target.src = "https://via.placeholder.com/180"; }}
             />

@@ -33,7 +33,7 @@ const handleSubmit = async (e) => {
   console.log('Form Data:', formData);
 
   try {
-    const res = await axios.post('http://localhost:7002/api/user', formData);
+    const res = await axios.post('http://13.233.142.193:7002/api/user', formData);
     console.log("Response:", res.data);
 
     if (res.data.success) {

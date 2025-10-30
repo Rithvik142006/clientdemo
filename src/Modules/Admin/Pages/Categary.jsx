@@ -16,7 +16,7 @@ export default function Category() {
      e.preventDefault();
      console.log("Category",Category)
 
-     await axios.post('http://localhost:7002/category/cate', Category)
+     await axios.post('http://13.233.142.193:7002/category/cate', Category)
 
      .then((res)=>{
                  if(res.savecategory){

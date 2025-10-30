@@ -61,7 +61,7 @@ export default function SingleView() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    Axios.get(`http://localhost:7002/invent/singleview/${id}`)
+    Axios.get(`http://13.233.142.193:7002/invent/singleview/${id}`)
       .then((res) => {
         console.log("API Response:", res.data);
         setState(res.data?.data || {});
@@ -101,7 +101,7 @@ export default function SingleView() {
               component="img"
               image={
                 state?.image
-                  ? `http://localhost:7002/invent/files/${state.image}`
+                  ? `http://13.233.142.193:7002/invent/files/${state.image}`
                   : "https://via.placeholder.com/400"
               }
               alt="Product"

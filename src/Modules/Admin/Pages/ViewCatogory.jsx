@@ -21,13 +21,13 @@ export default function ViewCategory() {
     const [deleteData, setDeleteData] = useState();
 
     useEffect(() => {
-        axios.get('http://localhost:7002/invent/getinventory')
+        axios.get('http://13.233.142.193:7002/invent/getinventory')
             .then((res) => setData(res.data))
             .catch((err) => console.log(err));
     }, [deleteData]);
 
     const handleDelete = (id) => {
-        axios.delete(`http://localhost:7002/invent/delete/${id}`)
+        axios.delete(`http://13.233.142.193:7002/invent/delete/${id}`)
             .then(() => {
                 alert("Deleted Successfully");
                 setDeleteData(id);
@@ -58,7 +58,7 @@ export default function ViewCategory() {
                                         <TableCell sx={{ textAlign: "center" }}>{row.name}</TableCell>
                                         <TableCell sx={{ textAlign: "center" }}>
                                             <img 
-                                                src={`http://localhost:7002/invent/files/${row.image}`} 
+                                                src={`http://13.233.142.193:7002/invent/files/${row.image}`} 
                                                 width="80" 
                                                 height="80" 
                                                 style={{ borderRadius: "10px", objectFit: "cover" }} 

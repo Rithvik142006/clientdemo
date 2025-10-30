@@ -50,7 +50,7 @@ export default function Order() {
     }
   
     axios
-      .get("http://localhost:7002/api/get", { headers: { "auth-token": token } })
+      .get("http://13.233.142.193:7002/api/get", { headers: { "auth-token": token } })
       .then((res) => {
         setUser(res.data);
         setUserID(res.data._id);
@@ -66,7 +66,7 @@ export default function Order() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:7002/invent/singleview/${id}`)
+      .get(`http://13.233.142.193:7002/invent/singleview/${id}`)
       .then((res) => setState(res.data?.data || {}))
       .catch((err) => console.error("API Error:", err));
   }, [id]);
@@ -78,7 +78,7 @@ export default function Order() {
       return;
     }
         axios
-      .get("http://localhost:7002/api/get", { headers: { "auth-token": token } })
+      .get("http://13.233.142.193:7002/api/get", { headers: { "auth-token": token } })
       .then((res) => {
         setUser(res.data);
         setUserID(res.data._id);
@@ -111,7 +111,7 @@ export default function Order() {
     const token = localStorage.getItem("usertoken");
   
     try {
-      const response = await axios.post("http://localhost:7002/order/create", orderData, {
+      const response = await axios.post("http://13.233.142.193:7002/order/create", orderData, {
         headers: { "auth-token": token }
       });
       console.log("Order Response:", response.data);
@@ -146,7 +146,7 @@ export default function Order() {
             height="100"
             image={
               state.image
-                ? `http://localhost:7002/invent/files/${state.image}`
+                ? `http://13.233.142.193:7002/invent/files/${state.image}`
                 : "https://via.placeholder.com/100"
             }
             alt="Product Image"

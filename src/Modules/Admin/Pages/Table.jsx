@@ -17,13 +17,13 @@ export default function OrderCards() {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:7002/order/get")
+        axios.get("http://13.233.142.193:7002/order/get")
             .then((res) => setOrders(res.data))
             .catch((err) => console.error("Error fetching orders:", err));
     }, []);
 
     const handleStatusChange = (orderId, status, userId) => {
-      axios.put(`http://localhost:7002/order/update/${orderId}`, { status })
+      axios.put(`http://13.233.142.193:7002/order/update/${orderId}`, { status })
           .then(() => {
               setOrders((prevOrders) =>
                   prevOrders.map((order) =>
@@ -32,7 +32,7 @@ export default function OrderCards() {
               );
   
               // Send a notification request
-              axios.post("http://localhost:7002/notifications/send", {
+              axios.post("http://13.233.142.193:7002/notifications/send", {
                   userId,
                   message: `Your order has been ${status}.`
               }).catch(err => console.error("Error sending notification:", err));
@@ -61,7 +61,7 @@ export default function OrderCards() {
                                 <CardContent>
                                     <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
                                         <Avatar
-                                            src={`http://localhost:7002/invent/files/${order.image}`}
+                                            src={`http://13.233.142.193:7002/invent/files/${order.image}`}
                                             alt={order.Itemid?.name || "Product"}
                                             sx={{ width: 50, height: 50, borderRadius: "5px", mr: 2 }}
                                         />

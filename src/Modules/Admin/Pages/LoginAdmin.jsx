@@ -28,7 +28,7 @@ export default function Login() {
       console.log('Form Data:', formData);
   
       try {
-        const res = await axios.post('http://localhost:7002/app/signup', formData)
+        const res = await axios.post('http://13.233.142.193:7002/app/signup', formData)
         .then((res) => {
           console.log(res);
           if (res.data.success) {
